@@ -5,4 +5,10 @@ services:
       ports:
         - "4200:80"
       command: ["./start.sh","local"]
-
+  invapp-fe-local2:
+      image: fe-example:1
+      ports:
+        - "4201:80"
+      command: ["./start.sh","local"]
+      volumes:
+        - ./test:/opt/app/dist:cached

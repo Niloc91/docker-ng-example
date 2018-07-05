@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: example-fe
-        image: fe-example:1
+        image: niloc91/fe-example:1
         imagePullPolicy: Always
         command: ["./start.sh"]
         args: ["dev"]

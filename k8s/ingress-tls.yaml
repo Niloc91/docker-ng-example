@@ -6,10 +6,9 @@ metadata:
   annotations:
 spec:
   rules:
-  - host: localhost
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: example-fe
-          servicePort: 80
+    - http:
+        paths:
+        - path: /
+          backend:
+            serviceName: example-fe
+            servicePort: 80
