@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: example-fe
+  namespace: default
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 60
+  template:
+    metadata:
+      labels:
+        app: example-fe
+    spec:
+      containers:
+      - name: example-fe
+        image: fe-example:1
+        imagePullPolicy: Always
+        command: ["./start.sh"]
+        args: ["dev"]
+

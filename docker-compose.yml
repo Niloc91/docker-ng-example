@@ -1,7 +1,7 @@
 version: '3'
 services:
   invapp-fe-local:
-      image: fe-example:latest
+      image: fe-example:1
       ports:
         - "4200:80"
       command: ["./start.sh","local"]
