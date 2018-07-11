@@ -22,4 +22,6 @@ spec:
         imagePullPolicy: Always
         command: ["./start.sh"]
         args: ["dev"]
+        ports:
+        - containerPort: 80
 

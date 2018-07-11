@@ -32,3 +32,11 @@ make fe.docker.up
 
 ## Stop local
 make fe.docker.down
+
+
+## Kubernetes
+`$ kubectl apply -f k8s/deployment.yaml`
+
+## Expose deployment
+
+`$ kubectl expose deployment example-fe --type=LoadBalancer`
